@@ -3,13 +3,6 @@
 Try to solve https://www.powerlanguage.co.uk/wordle/[wordle] riddles by taking previous tries into consideration.
 
 
-== Limitations
-
-- In the game, letters might occur more than once. This is not reflected in this
-  tool. It is assumed each "yellow" letter must occur once, and "green" letters
-  are not considered further.
-
-
 == Usage
 
     wordle UNUSED [TRY_1 [TRY_N ...]]
