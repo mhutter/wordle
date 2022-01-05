@@ -1,0 +1,31 @@
+= `wordle` - wordle solver
+
+Try to solve https://www.powerlanguage.co.uk/wordle/[wordle] riddles by taking previous tries into consideration.
+
+
+== Limitations
+
+- In the game, letters might occur more than once. This is not reflected in this
+  tool. It is assumed each "yellow" letter must occur once, and "green" letters
+  are not considered further.
+
+
+== Usage
+
+    wordle UNUSED [TRY_1 [TRY_N ...]]
+
+`UNUSED`:: List of letters that are not used (grey letters).
+
+`TRY_N`:: Past results, but only yellow & green letters.
+- lower case indicates YELLOW letter
+- upper case indicates GREEN letter
+
+
+== License
+
+MIT (see link:LICENSE[LICENSE])
+
+---
+> https://hutter.io/[Manuel Hutter] -
+> GitHub https://github.com/mhutter[@mhutter] -
+> Twitter https://twitter.com/dratir[@dratir]
