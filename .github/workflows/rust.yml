@@ -1,0 +1,43 @@
+---
+# yamllint disable-line rule:truthy
+on: push
+
+env:
+  CARGO_TERM_COLOR: always
+
+defaults:
+  runs-on: ubuntu-latest
+
+.commonSteps: &commonSteps
+
+
+jobs:
+  test:
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+      - run: "make test"
+
+  clippy:
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+      - run: "make clippy"
+
+  rustfmt:
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+      - run: "make rustfmt"
