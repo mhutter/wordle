@@ -19,3 +19,11 @@ clippy: ## Run clippy
 .PHONY: rustfmt
 rustfmt: ## Run rustfmt
 	cargo fmt --all -- --check
+
+.PHONY: clean
+clean:
+	rm -f words.txt
+
+words.txt: JS=$(shell curl -sS https://www.powerlanguage.co.uk/wordle/ | grep -Po '(?<=<script src=")main\.([^.]+)\.js(?=">)')
+words.txt: ## Download latest word list
+	curl -sS "https://www.powerlanguage.co.uk/wordle/$(JS)" | grep -Eo '"[a-z]{5}"' | tr -d '"' | sort -u > "$@"
