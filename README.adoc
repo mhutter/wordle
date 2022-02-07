@@ -1,6 +1,6 @@
-= `wordle` - wordle solver
+= `wordle` - wordle ~cheater~ solver
 
-Try to solve https://www.powerlanguage.co.uk/wordle/[wordle] riddles by taking previous tries into consideration.
+Try to ~cheat~ solve https://www.powerlanguage.co.uk/wordle/[wordle] riddles by taking previous tries into consideration.
 
 
 == Usage
@@ -12,6 +12,11 @@ Try to solve https://www.powerlanguage.co.uk/wordle/[wordle] riddles by taking p
 `TRY_N`:: Past results, but only yellow & green letters.
 - lower case indicates YELLOW letter
 - upper case indicates GREEN letter
+
+Example:
+
+    $ wordle tuiopazcbn ' e  e' '   Ed' '  DE' '  DER'
+    elder
 
 
 == License
